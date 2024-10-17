@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio -MM MASEMOLA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="overflow-x-hidden font-Outfit leading-8 dark:bg-darkTheme dark:text-white">
+
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]
+    dark:hidden">
+        <img src="./images/header-bg-color.png" alt="" class="w-full">
+    </div>
+
+
+    <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+
+        <!-- <img src="./images/Fezo.png" alt="Logo" -->
+        <!-- class="w-28 cursor-pointer mr-14 dark:hidden"> -->
+
+        <img src="./images/logo_dark.png" alt="Logo"
+        class="w-28 cursor-pointer mr-14 hidden dark:block">
+
+        <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo
+        dark:border dark:border-white/50 dark:bg-transparent ">
+            <li><a href="#top">Home</a></li>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#work">My Work</a></li>
+            <li><a href="#contact">Contact me</a></li>
+        </ul>
+
+        <div class="flex items-center gap-4 p-4">
+            <button onclick="toggleTheme()" aria-label="Toggle dark mode">
+                <img src="./images/moon_icon.png" alt="Moon Icon" class="w-6 dark:hidden">
+                <img src="./images/sun_icon.png" alt="Sun Icon" class="w-6 hidden dark:block">
+            </button>
+    
+            <a href="#contact" class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 dark:border-white/50">
+                Contact 
+                <img src="./images/arrow-icon.png" alt="Arrow Icon" class="w-3 dark:hidden">
+                <img src="./images/arrow-icon-dark.png" alt="Arrow Icon Dark" class="w-3 hidden dark:block">
+            </a>
+    
+            <button class="block md:hidden ml-3" onclick="openMenu()" aria-label="Open menu">
+                <img src="./images/menu-black.png" alt="Menu Icon" class="w-6 dark:hidden">
+                <img src="./images/menu-white.png" alt="Menu Icon Dark" class="w-6 hidden dark:block">
+            </button>
+        </div>
+<!-- ----- mobile menu ------  -->
+        <ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 font-Ovo dark:bg-darkHover dark:text-white">
+
+            <div class="absolute right-6 top-6" onclick="closeMenu()">
+                <img src="./images/close-black.png" alt="" class="w-5 cursor-pointer dark:hidden">
+
+                <img src="./images/close-white.png" alt="" class="w-5 cursor-pointer hidden dark:block">
+            </div>
+
+            <li><a href="#top" onclick="closeMenu()">Home</a></li>
+            <li><a href="#about" onclick="closeMenu()">About me</a></li>
+            <li><a href="#services" onclick="closeMenu()">Services</a></li>
+            <li><a href="#work" onclick="closeMenu()">My Work</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact me</a></li>
+        </ul>
+    
+</nav>
+
+<!-- ------ header --------------  -->
+
+<div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+    <!-- <img src="./images/mav.jpg" alt="" class="rounded-full w-32"> -->
+    <div class="max-w-max mx-auto relative">
+        <img src="./images/mav.jpg" alt="" class="w-60 sm:w-60 rounded-3xl max-w-none">
+    </div>
+    <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo">
+        Hi! I'm Mahlotle Masemola <img src="./images/hand-icon.png" alt="" class="w-6"></h3>
+    <h1 class="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">Software Developer </h1>
+    <p class="max-w-2xl mx-auto font-Ovo">I am a dedicated Software Developer with experience in programming, specializing in crafting innovative and efficient solutions. With a strong background in various technologies, I am committed to leveraging my skills to drive impactful results and contribute to dynamic projects in the tech industry. </p>
+    <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
+        <a href="#contact"
+        class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2 dark:border-transparent">
+        contact me <img src="./images/right-arrow-white.png" alt="" class="w-4"></a>
+
+        <a href="files/Mahlotle Mavis Masemola CV" download
+        class="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black">
+        my cv <img src="./images/download-icon.png" alt="" class="w-4"></a>
+    </div>
+</div>
+<div class="section__text">
+      <button class="btn btn-color-1" onclick="location.href='./#contact'">
+      </button>
+    </div>
+    <div class="flex justify-center mt-4 gap-4" id="socials-container">
+        <img
+            src="./images/linkedin.png"
+            alt="My LinkedIn profile"
+            class="cursor-pointer w-8 h-8" 
+            onclick="location.href='https://www.linkedin.com/in/mahlotle-masemola-7810b4272/'"
+        />
+        <img
+            src="./images/github.png"
+            alt="My Github profile"
+            class="cursor-pointer w-8 h-8"
+            onclick="location.href='https://github.com/Mahlotle'"
+        />
+    </div>
+    
+
+<!-- ------------ about me -----------  -->
+ <div id="about" class="w-full px-[12%] py-10 scroll-mt-20">
+    <h4 class="text-center mb-2 text-lg font-Ovo">Introduction</h4>
+    <h2 class="text-center text-5xl font-Ovo">About me</h2>
+
+    <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
+        <div class="max-w-max mx-auto relative">
+            <img src="./images/mav.jpg" alt="" class="w-64 sm:w-80 rounded-3xl max-w-none">
+
+            <div class="bg-white w-1/2 aspect-square absolute right-0 bottom-0 rounded-full translate-x-1/4 translate-y-1/3 shadow-[0_4px_55px_rgba(149,0,162,0.15)] flex items-center justify-center">
+               <img src="./images/dev-icon.png" alt="" class="w-1/4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            </div>
+        </div>
+        <div class="flex-1">
+            <p class="mb-10 max-w-2xl font-Ovo">I am a highly motivated and detail-oriented recent graduate in Software Development from Tshwane University of Technology, with practical experience in building web applications, artificial intelligence projects, and developing innovative solutions. Eager to leverage my technical skills, creativity, and passion for software development, I aim to contribute to a dynamic team and foster growth within the technology industry.</p>
+
+            <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+                <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50 flex flex-col items-center">
+                    <img src="./images/code-icon.png" alt="Code Icon" class="w-7 mt-3 dark:hidden">
+                    <img src="./images/code-icon-dark.png" alt="Code Icon Dark" class="w-7 mt-3 hidden dark:block">
+            
+                    <h3 class="my-4 font-semibold text-gray-700 dark:text-white text-center">Languages</h3>
+                    
+                    <ul class="flex flex-col space-y-2">
+                        <li class="flex items-center space-x-2">
+                            <img src="./images/checkmark.png" alt="Experience icon" class="w-6 h-6" />
+                            <span class="text-lg">HTML</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <img src="./images/checkmark.png" alt="Experience icon" class="w-6 h-6" />
+                            <span class="text-lg">CSS</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <img src="./images/checkmark.png" alt="Experience icon" class="w-6 h-6" />
+                            <span class="text-lg">JavaScript</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <img src="./images/checkmark.png" alt="Experience icon" class="w-6 h-6" />
+                            <span class="text-lg">MySQL</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <img src="./images/checkmark.png" alt="Experience icon" class="w-6 h-6" />
+                            <span class="text-lg">React.js</span>
+                        </li>
+                    </ul>
+                </li>
+            
+                <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50 flex flex-col items-center">
+                    <img src="./images/code-icon.png" alt="" class="w-7 mt-3 dark:hidden">
+                    <img src="./images/code-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block">
+                    
+                    <h3 class="my-4 font-semibold text-gray-700 dark:text-white text-center">Languages</h3>
+                    <ul class="flex flex-col space-y-2">
+                        <li class="flex items-center space-x-2">
+                            <img src="./images/checkmark.png" alt="Experience icon" class="w-6 h-6" />
+                            <span class="text-lg">Node.js</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <img src="./images/checkmark.png" alt="Experience icon" class="w-6 h-6" />
+                            <span class="text-lg">Git</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <img src="./images/checkmark.png" alt="Experience icon" class="w-6 h-6" />
+                            <span class="text-lg">C#</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <img src="./images/checkmark.png" alt="Experience icon" class="w-6 h-6" />
+                            <span class="text-lg">Django</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <img src="./images/checkmark.png" alt="Experience icon" class="w-6 h-6" />
+                            <span class="text-lg">Python</span>
+                        </li>
+                    </ul>
+                </li>
+            
+                <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50 flex flex-col items-center">
+                    <img src="./images/edu-icon.png" alt="" class="w-7 mt-3 dark:hidden">
+                    <img src="./images/edu-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block">
+            
+                    <h3 class="my-4 font-semibold text-gray-700 dark:text-white text-center">Education</h3>
+                    <h2 class="text-gray-600 text-sm dark:text-white/80">NDip Information Technology: Software Development</>
+                </li>
+            </ul>
+            
+            <h4 class="my-6 text-gray-700 font-Ovo dark:text-white/80">Tools i use</h4>
+
+            <ul class="flex items-center gap-3 sm:gap-5">
+                <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                    <img src="./images/vscode.png" alt="" class="w-5 sm:w-7">
+                </li>
+               
+                <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                    <img src="./images/mysql.png" alt="" class="w-5 sm:w-7">
+                </li>
+                <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                    <img src="./images/figma.png" alt="" class="w-5 sm:w-7">
+                </li>
+                <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                    <img src="./images/git.png" alt="" class="w-5 sm:w-7">
+                </li>
+                <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                    <img src="./images/nodejs.png" alt="" class="w-5 sm:w-7">
+                </li>
+                <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                    <img src="./images/js.png" alt="" class="w-5 sm:w-7">
+                </li>
+                <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                    <img src="./images/react.png" alt="" class="w-5 sm:w-7">
+
+                </li>
+                <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                    <img src="./images/python.png" alt="" class="w-5 sm:w-7">
+                </li>
+                <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                    <img src="./images/c-sharp.png" alt="" class="w-5 sm:w-7">
+                </li>
+                <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                    <img src="./images/c-.png" alt="" class="w-5 sm:w-7">
+                </li>
+            </ul>
+        </div>
+    </div>
+ </div>
+
+ <!-- ----------- services ---------  -->
+  <div id="services" class="w-full px-[12%] py-10 scroll-mt-20">
+    <h4 class="text-center mb-2 text-lg font-Ovo">What I offer</h4>
+    <h2 class="text-center text-5xl font-Ovo">My services</h2>
+    <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
+        I am a dedicated Software Developer with experience in building innovative solutions using cutting-edge technologies.
+    </p>
+
+    <div class="grid grid-cols-auto gap-6 my-10">
+        <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+            <img src="./images/web-icon.png" alt="" class="w-10">
+            <h3 class="text-lg my-4 text-gray-700 dark:text-white">Web Development</h3>
+            <p class="text-sm text-gray-600 leading-5 dark:text-white/80">
+                Specializing in crafting dynamic and scalable web applications as a service, delivering intuitive platforms that enhance user engagement and streamline digital experiences
+            </p>
+            <a href="https://github.com/Mahlotle" class="flex items-center gap-2 text-sm mt-5">Read more <img src="./images/right-arrow.png" alt="" class="w-4"></a>
+        </div>
+
+        <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+            <img src="./images/web-icon.png" alt="" class="w-10">
+            <h3 class="text-lg my-4 text-gray-700 dark:text-white">Generative AI Solutions</h3>
+            <p class="text-sm text-gray-600 leading-5 dark:text-white/80">
+                Leveraging AI to build intelligent applications such as quiz generators, chatbots, and content recommendation systems.
+            </p>
+            <a href="https://github.com/Mahlotle" class="flex items-center gap-2 text-sm mt-5">Read more <img src="./images/right-arrow.png" alt="" class="w-4"></a>
+        </div>
+
+
+        <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+            <img src="./images/ui-icon.png" alt="" class="w-10">
+            <h3 class="text-lg my-4 text-gray-700 dark:text-white">UI/UX Design</h3>
+            <p class="text-sm text-gray-600 leading-5 dark:text-white/80">
+                Designing intuitive, user-centric interfaces, focusing on creating delightful and efficient user experiences for web and mobile applications.
+            </p>
+            <a href="https://github.com/Mahlotle" class="flex items-center gap-2 text-sm mt-5">Read more <img src="./images/right-arrow.png" alt="" class="w-4"></a>
+        </div>
+    </div>
+</div>
+
+<!-- ------------ my work ------------  -->
+
+<section id="projects" class="py-12">
+    <div id="work" class="w-full px-[12%] py-10 scroll-mt-20"></div>
+    <div class="text-center">
+        <p class="mb-4">
+            <span class="inline-block px-10 py-3 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white">
+                Browse My Recent
+            </span>
+        </p>
+        <h1>
+            <span class="inline-block px-10 py-3 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white text-3xl md:text-4xl font-bold">
+                Projects
+            </span>
+        </h1>
+    </div>
+    
+    
+
+    <div class="experience-details-container max-w-6xl mx-auto px-4">
+        <div class="about-containers grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="details-container color-container bg-white rounded-lg shadow-md p-6 transition-transform duration-300 hover:shadow-lg">
+                <div class="article-container mb-4">
+                    <img src="./images/work-2.jpeg" alt="Project 1" class="project-img w-full h-48 object-cover rounded-md" />
+                </div>
+                <h2 class="experience-sub-title project-title text-xl font-semibold mb-4"> E-COMMERCE SYSTEMS</h2>
+                <div class="btn-container flex space-x-4">
+                    <button
+                        class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2 dark:border-transparent"
+                        onclick="location.href='https://github.com/chrisachoo/eMarket'"
+                    >
+                        Github
+                    </button>
+                    <button
+                        class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2 dark:border-transparent"
+                        onclick="location.href='https://e-market.vercel.app/'"
+                    >
+                        Live Demo
+                    </button>
+                </div>
+            </div>
+            <div class="details-container color-container bg-white rounded-lg shadow-md p-6 transition-transform duration-300 hover:shadow-lg">
+                <div class="article-container mb-4">
+                    <img src="./images/work-1.jpeg" alt="Project 2" class="project-img w-full h-48 object-cover rounded-md" />
+                </div>
+                <h2 class="experience-sub-title project-title text-xl font-semibold mb-4">AI-PLANT-DISEASE-DETECTION</h2>
+                <div class="btn-container flex space-x-4">
+                    <button
+                        class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2 dark:border-transparent"
+                        onclick="location.href='https://github.com/Mahlotle/AI-PLANT-DISEASE-DETECTION'"
+                    >
+                        Github
+                    </button>
+                    <button
+                        class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2 dark:border-transparent"
+                        onclick="location.href='https://ai-plant-disease-detection-jpdirm8vessyecyqimr2up.streamlit.app/'"
+                    >
+                        Live Demo
+                    </button>
+                </div>
+            </div>
+            <div class="details-container color-container bg-white rounded-lg shadow-md p-6 transition-transform duration-300 hover:shadow-lg">
+                <div class="article-container mb-4">
+                    <img src="./images/work-3.jpeg" alt="Project 3" class="project-img w-full h-48 object-cover rounded-md" />
+                </div>
+                <h2 class="experience-sub-title project-title text-xl font-semibold mb-4">Gemini Powered chatBot</h2>
+                <div class="btn-container flex space-x-4">
+                    <button
+                        class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2 dark:border-transparent"
+                        onclick="location.href='https://github.com/Mahlotle/MY-CHATBOT-USING-GEMINI'"
+                    >
+                        Github
+                    </button>
+                    <button
+                        class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2 dark:border-transparent"
+                        onclick="location.href='https://my-chatbot-using-gemini.vercel.app/'"
+                    >
+                        Live Demo
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <br>
+        <a href="https://github.com/Mahlotle" target="_blank">
+            <button type="submit" class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover">
+                More Projects
+                <img src="./images/right-arrow-white.png" alt="" class="w-4">
+            </button>
+        </a>
+        
+    </div>
+</div>
+</section>
+
+
+
+<!-- ----- contact -------------  -->
+ <div id="contact" class="w-full px-[12%] py-10 scroll-mt-20 bg-[url('./images/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center
+ dark:bg-none">
+
+    <h4 class="text-center mb-2 text-lg font-Ovo">Connect with me</h4>
+    <h2 class="text-center text-5xl font-Ovo">Get in touch</h2>
+    <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">I'd love to hear from you! If you have any questions, comments or feedback, please use the form below.</p>
+
+    <form method="POST" action="https://api.web3forms.com/submit" class="max-w-2xl mx-auto">
+
+<!------- Enter your web3 form access key below ------------>
+
+<form id="feedbackForm" method="POST" action="https://web3forms.com/api/submit">
+    <input type="hidden" name="access_key" value="83f18fa8-e10c-4426-a50b-adfdb80910f2">
+
+    <div class="grid grid-cols-auto gap-6 mt-10 mb-8">
+        <input type="text" placeholder="Enter your name" class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90" required name="name">
+        <input type="email" placeholder="Enter your email" class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90" required name="email">
+    </div>
+    <textarea rows="6" placeholder="Enter your message" class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90" required name="message"></textarea>
+
+    <button type="submit" class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover">Submit now
+        <img src="./images/right-arrow-white.png" alt="" class="w-4">
+    </button>
+</form>
+
+<!-- ----------- footer ---------  -->
+ <div class="mt-20">
+    <div class="text-center">
+         <img src="./images/logo_dark.png" alt="" class="w-36 mx-auto mb-2 hidden dark:block">
+
+
+        <div class="w-max flex items-center gap-2 mx-auto">
+            <img src="./images/mail_icon.png" alt="" class="w-6 dark:hidden">
+            <img src="./images/mail_icon_dark.png" alt="" class="w-6 hidden dark:block">
+
+            <p><a href="mailto:masemola99mm@gmail.com">masemola99mm@gmail.com</a></p>
+        </div>
+    </div>
+    <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
+        <p>© 2024 MM Masemola. All rights reserved.</p>
+        <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+            <li><a target="_blank" href="https://github.com/Mahlotle">GitHub</a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/in/mahlotle-masemola-7810b4272/">LinkedIn</a></li>
+            <p>0782081907</p>
+           
+        </ul>
+    </div>
+ </div>
+
+<script src="./script.js"></script>
+</body>
+</html>
